@@ -198,11 +198,6 @@ def lineBot(op):
             if wait["bcommentOn"] and "bcomment" in wait:
                 nadya.sendMessage(op.param1,nadya.getContact(op.param2).displayName + "\n\n" + str(wait["bcomment"]))
            
-        if msg.contentType == 16:
-               url = msg.contentMetadata['postEndUrl']
-               nadya.like(url[25:58], url[66:], likeType=1001)
-               nadya.comment(url[25:58], url[66:], wait["comment1"])
-
         if op.type == 17:
             if wait["acommentOn"] and "acomment" in wait:
                 cnt = nadya. getContact(op.param2)
